@@ -1,0 +1,106 @@
+HTML{
+    font-size: 16px;
+    font-family: Arial;
+    background-color: var(--color-iron);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.maincontainer{
+    width: 100%;
+    height: auto;
+}
+
+.containertheme{
+    width: 100vw;
+    height: 50vw;
+}
+
+.img_theme{
+    background-image: url(img/Home/Home_1503.jpg);
+    background-size: cover;
+    width: 50vw;
+    height: 50vw;
+    display: inline-block;
+}
+
+.textcontainer_theme_right{
+    display: inline-block;
+    width: 50vw;
+    height: 50vw;
+}
+
+.textcontainer_theme_left{
+    display: inline-block;
+    width: 50%;
+    height: 50vw;
+}
+/*
+.containertheme{
+    width: 100%;
+    padding-top: 50%;
+}
+
+.container_imgtheme1{
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    background-color: pink;
+}
+
+.container_texttheme1{
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    padding: 50px;
+}  
+
+.container_imgtheme2{
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    padding: 50px;
+}
+
+.container_texttheme2{
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}  
+
+.imgtheme{
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-size: cover;
+    background-image: url(img/Home/Home_1503.jpg);
+}
+
+.texttheme{
+    margin: 50px;
+    color: black;
+}
+*/
+.bild{
+    background-image: url(img/Home/Home_1503.jpg);
+    background-size: cover;
+    width: 50vw;
+    height: 50vw;
+}
