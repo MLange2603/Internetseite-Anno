@@ -1,14 +1,14 @@
 HTML{
     font-size: 16px;
     font-family: Arial;
-    background-color: var(--color-iron);
+    background-color: var(--color-iron)
 }
 
 *{
     margin: 0;
     padding: 0;
     border: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
 }
 
 .maincontainer{
@@ -17,10 +17,9 @@ HTML{
 }
 
 .containertheme{
-    background-color: aliceblue;
     width: 100%;
-    height: 50vw;
     display: flex;
+    height: 50vw;
 }
 
 .img_theme{
@@ -30,8 +29,7 @@ HTML{
 }
 
 .textcontainer_theme{
-    width: 50%;
-    height: 50vw;
+    max-width: 50%;
 }
 
 .textcontainer_title{
@@ -43,6 +41,68 @@ HTML{
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 50%;
+}
+
+.containerweitereInfos{
+    height: 1%;
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 1.5%;
+    margin-bottom: 3%;
+}
+
+.weitereInfos{
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    margin-right: 10%;
+    color: cornflowerblue;
+    border: 1px solid cornflowerblue;
+    padding: 1.5%;
+    border-radius: 10px;
+}
+
+.weitereInfos:hover{
+    background-color: rgba(100, 149, 237, 0.25);
+    transition: background-color 0.7s;
+}
+
+.container_maintext{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2%;
+    height: 50%;
+}
+
+.maintext{
+    height: 100%;
+    width: 100%;
+    font-size: 2rem;
+    overflow: auto;
+}
+
+.containerrest{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.rest{
+    height: 2.5rem;
+    width: fit-content;
+    font-size: 2rem;
+    font-weight: lighter;
+    color: black;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: center;
+    padding: 0.75%;
 }
 
 /*
