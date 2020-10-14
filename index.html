@@ -4,9 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css"> 
+    <script src="javascript.js" async> </script>
 </head>
 <body>
-        justify-content: space-between /space-around
-        test123
+    <div id="menu"> </div>
+    <div class="header_container">
+        <div class="header_index" onclick="Home()">
+            ANNO
+        </div>
+        <div class="header_main">
+            <div class="header_main_link">
+                GALERIE
+            </div>
+            <div class="header_main_link" onclick="weitereinfos()">
+                WEITERE INFOS
+            </div>
+            <div class="header_main_link">
+                SCHIFFE
+            </div>
+            <div class="header_main_link">
+                GEBÄUDE
+            </div>
+        </div>
+        <div class="header_icons_container" onclick="show()">
+            <div class="header_icons_text">
+                MENÜ
+            </div>
+            <div class="header_icons_icon" style="background-image: url(img/index/index_MENÜ.png);"> </div>
+        </div>
+    </div>    
+        <div id="maincontainer"> </div> 
 </body>
 </html>
