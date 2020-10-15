@@ -52,3 +52,20 @@ function weitereinfos() {
         xhr.open('get', 'weitereinfos.html');
         xhr.send();
 };
+
+function buildings() {
+
+    const xhr = new XMLHttpRequest();
+        const container = document.getElementsByClassName('maincontainer');
+    
+        xhr.onload = function() {
+            if (this.status === 200) {
+                maincontainer.innerHTML = xhr.responseText;
+            } else {
+                console.warn('Seite konnte nicht geladen werden');
+            }
+        };
+    
+        xhr.open('get', 'buildings.html');
+        xhr.send();
+};
