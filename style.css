@@ -2,6 +2,7 @@ HTML{
     font-size: 16px;
     font-family: Arial;
     background-color: var(--color-iron);
+    scroll-behavior: smooth;
 }
 
 *{
@@ -10,8 +11,6 @@ HTML{
     border: 0;
     box-sizing: inherit;
 }
-
-/* <home.html> */
 
 .maincontainer{
     width: 100%;
@@ -116,74 +115,6 @@ HTML{
     transition: background-color 0.6s;
 }
 
-/*
-.textcontainer_theme_left{
-    display: inline-block;
-    width: 50%;
-    height: 50vw;
-}
-
-.containertheme{
-    width: 100%;
-    padding-top: 50%;
-}
-
-.container_imgtheme1{
-    display: inline-block;
-    width: 50%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    background-color: pink;
-}
-
-.container_texttheme1{
-    display: inline-block;
-    width: 50%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    padding: 50px;
-}  
-
-.container_imgtheme2{
-    display: inline-block;
-    width: 50%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    padding: 50px;
-}
-
-.container_texttheme2{
-    display: inline-block;
-    width: 50%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-}  
-
-.imgtheme{
-    position: absolute;
-    left: 0;
-    top: 0;
-    background-size: cover;
-    background-image: url(img/Home/Home_1503.jpg);
-}
-
-.texttheme{
-    margin: 50px;
-    color: black;
-}*/
-
-/*   </home.html>  
-
-    <index.html> */
-
 .header_container{
     width: 100%;
     height: 7vh;
@@ -199,7 +130,7 @@ HTML{
     color: white;
     font-size: 2rem;
     text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;    
+    font-family: Georgia, 'Times New Roman', Times, serif;   
 }
 
 .header_main{
@@ -271,18 +202,22 @@ HTML{
 
 .maincontainer_wI{
     width: 100%;
-    height: 93vh;
     display: flex;
+    z-index: -2;
+    position: absolute;
+    top: 7vh;
+    left: 0;
 }
 
 .wI_basecontainer{
-    width: inherit;
-    height: 93vh;
+    position: relative;
+    width: 80%;
     color: white;
-    overflow: auto;
 }
 
-.wI_navigation{
+.wI_navigation1{
+    position: fixed;
+    right: 0;
     width: 10%;
     display: flex;
     flex-direction: column;
@@ -292,9 +227,35 @@ HTML{
     align-items: center;
 }
 
+.wI_navigation2{
+    position: fixed;
+    right: 10%;
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(100, 149, 237, 0.45);
+    height: 93vh;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.wI_navigation_rest{
+    height: 7vh;
+    width: 20%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: black;
+    z-index: -1;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;  
+    font-size: 1.5rem;
+    text-align: center;
+}
+
 .wI_navigation_Einheit{
     width: 80%;
-    height: 50%;
+    height: 80%;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -309,7 +270,7 @@ HTML{
     text-align: center;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 2%;
+    padding-top: 2%;
 }
 
 .wI_text{
@@ -327,6 +288,38 @@ HTML{
     margin-top: 0.5%;
     margin-right: auto;
     margin-left: 65%;
+}
+
+.build_navigation{
+    position: fixed;
+    right: 0;
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(100, 149, 237, 0.45);
+    height: 93vh;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.build_navigation_rest{
+    height: 7vh;
+    width: 10%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: black;
+    z-index: -1;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;  
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.build_basecontainer{
+    position: relative;
+    width: 90%;
+    color: white;
 }
 
 .unterThema{
@@ -369,9 +362,27 @@ td{
     color: goldenrod;
     border-color: currentColor;
     margin-top: 5%;
+    margin-right: auto;
+    margin-left: auto;
+    width: 70%;
+}
+
+#ajumptotop{
+    width: auto;
+    height: auto;
 }
 
 .jumptotop:hover{
     background-color: rgba(218, 165, 32, 0.4);
     transition: background-color 0.6s;
 }
+
+a{
+    display: inherit;
+    justify-content: inherit;
+    width: 100%;
+    height: 100%;
+    color: inherit;
+    text-decoration: inherit;
+}
+
