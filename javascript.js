@@ -1,6 +1,3 @@
-function show() {
-    document.getElementById('menu').style.visibility = 'visible';
-};
 
 setTimeout(function Home() {
 
@@ -18,6 +15,17 @@ setTimeout(function Home() {
         xhr.open('get', 'home.html');
         xhr.send();
 }, 0);
+
+function menu() {
+    var menu = document.getElementById("menu");
+    if(menu) {
+        if(menu.style.visibility == "hidden") {
+        menu.style.visibility = "visible";
+            } else {
+                menu.style.visibility = "hidden";
+            }
+        }       
+    };
 
 function Home() {
 

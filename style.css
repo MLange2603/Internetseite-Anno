@@ -286,8 +286,8 @@ HTML{
     font-size: 0.8rem;
     color: black;
     margin-top: 0.5%;
-    margin-right: auto;
-    margin-left: 65%;
+    margin-right: 5%;
+    margin-left: 50%;
 }
 
 .build_navigation{
@@ -299,6 +299,14 @@ HTML{
     background-color: rgba(100, 149, 237, 0.45);
     height: 93vh;
     justify-content: space-around;
+    align-items: center;
+}
+
+.build_navigation_rest_container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
@@ -386,3 +394,8 @@ a{
     text-decoration: inherit;
 }
 
+#QuelledesUrspruenglichenTextes{
+    color: blue;
+    font-size: inherit;
+    text-decoration: underline;
+}
