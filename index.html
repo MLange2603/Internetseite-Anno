@@ -7,24 +7,37 @@
     <link rel="stylesheet" href="style.css"> 
     <script src="javascript.js" async> </script>
 </head>
-<body>
-    <div id="menu"> </div>
+<body onscroll="closediv()">
+    <div id="menu">
+        <div class="menu_theme" onclick="weitereinfos()">
+            WEITERE INFOS
+        </div>
+        <div class="menu_theme" onclick="boats()">
+            SCHIFFE
+        </div>
+        <div class="menu_theme" onclick="buildings()">
+            GEBÄUDE
+        </div>
+        <div class="menu_theme" onclick="gallery()">
+            GALERIE
+        </div>
+    </div>
     <div class="header_container">
         <div class="header_index" onclick="Home()">
             ANNO
         </div>
         <div class="header_main">
-            <div class="header_main_link">
-                GALERIE
-            </div>
             <div class="header_main_link" onclick="weitereinfos()">
                 WEITERE INFOS
             </div>
-            <div class="header_main_link">
+            <div class="header_main_link" onclick="boats()">
                 SCHIFFE
             </div>
             <div class="header_main_link" onclick="buildings()">
                 GEBÄUDE
+            </div>
+            <div class="header_main_link" onclick="gallery()">
+                GALERIE
             </div>
         </div>
         <div class="header_icons_container" onclick="menu()">
