@@ -271,6 +271,13 @@ HTML{
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    background-color: inherit;
+}
+
+.wI_navigation_Einheit:hover{
+    background-color: rgba(100, 149, 237, 0.6);
+    transition: 1s;
+    border-radius: 50px;
 }
 
 .wI_headline{
