@@ -16,3 +16,6 @@ alleine ausprobieren, habe ich wie gesagt noch nicht, weil mir das gerade erst e
 Nochmal vielen Dank für deine Hilfe.
 
 LG Marcel
+
+
+PS: Bei weiteren Ideen von die zur Gestaltung und Verbesserung der Seite gerne Melden ^^
