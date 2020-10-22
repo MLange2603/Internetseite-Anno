@@ -6,41 +6,42 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css"> 
     <script src="javascript.js" async> </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
-<body onscroll="closediv()">
+<body onscroll="closediv()" id="#index">
     <div id="menu">
-        <div class="menu_theme" onclick="weitereinfos()">
+        <div class="menu_theme pointer"  onclick="load_content('weitereinfos')">
             WEITERE INFOS
         </div>
-        <div class="menu_theme" onclick="boats()">
+        <div class="menu_theme pointer"  onclick="load_content('boats')">
             SCHIFFE
         </div>
-        <div class="menu_theme" onclick="buildings()">
+        <div class="menu_theme pointer" onclick="load_content('buildings')">
             GEBÄUDE
         </div>
-        <div class="menu_theme" onclick="gallery()">
+        <div class="menu_theme pointer" onclick="load_content('gallery')">
             GALERIE
         </div>
     </div>
     <div class="header_container">
-        <div class="header_index" onclick="Home()">
+        <div class="header_index pointer" onclick="load_content('home')">
             ANNO
         </div>
         <div class="header_main">
-            <div class="header_main_link" onclick="weitereinfos()">
+            <div class="header_main_link pointer" onclick="load_content('weitereinfos')">
                 WEITERE INFOS
             </div>
-            <div class="header_main_link" onclick="boats()">
+            <div class="header_main_link pointer" onclick="load_content('boats')">
                 SCHIFFE
             </div>
-            <div class="header_main_link" onclick="buildings()">
+            <div class="header_main_link pointer" onclick="load_content('buildings')">
                 GEBÄUDE
             </div>
-            <div class="header_main_link" onclick="gallery()">
+            <div class="header_main_link pointer" onclick="load_content('gallery')">
                 GALERIE
             </div>
         </div>
-        <div class="header_icons_container" onclick="menu()">
+        <div class="header_icons_container pointer" onclick="menu()">
             <div class="header_icons_text">
                 MENÜ
             </div>

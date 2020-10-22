@@ -1,4 +1,9 @@
 <div class="maincontainer" id="zumSeitenanfang"> </div>
+<div class="home_Bildervorschau">
+    <div class="Bildervorschau_Bild"  style="background-image: url(img/Galerie/1404/1.png);"> </div>
+    <div class="Bildervorschau_Bild"  style="background-image: url(img/Galerie/1404/2.png);"> </div>
+    <div class="Bildervorschau_Bild"  style="background-image: url(img/Galerie/1404/3.png);"> </div>
+</div>
 <!--
     <div class="img_parallax" style="background-image: url(img/Galerie/2070/14.png)">
         Tauche ein in die Welt von Anno
@@ -9,7 +14,7 @@
     <div class="textcontainer_theme">
         <div class="textcontainer_title" style="background-image: url(img/Home/Logo_1800.png);"> </div>
         <div class="containerweitereInfos">
-            <div class="weitereInfos">WEITERE INFOS</div>
+            <div class="weitereInfos pointer">WEITERE INFOS</div>
         </div>
         <div class="container_maintext">
             <div class="maintext">
@@ -19,13 +24,13 @@
             </div>
         </div>                 
         <div class="containerrest">
-            <div class="rest">
+            <div class="rest pointer" onclick="load_content_and_scroll_to_hash('gallery', '1800')">
                 Bildergalerie
             </div>
-            <div class="rest">
+            <div class="rest pointer">
                 Schiffe
             </div>
-            <div class="rest" onclick="buildings()">
+            <div class="rest pointer">
                 Monumente
             </div>
         </div>
@@ -35,7 +40,7 @@
     <div class="textcontainer_theme">
         <div class="textcontainer_title" style="background-image: url(img/Home/Logo_2205.png);"> </div>
         <div class="containerweitereInfos">
-            <div class="weitereInfos">WEITERE INFOS</div>
+            <div class="weitereInfos pointer">WEITERE INFOS</div>
         </div>
         <div class="container_maintext">
             <div class="maintext">
@@ -45,13 +50,13 @@
             </div> 
         </div>
         <div class="containerrest">
-            <div class="rest">
+            <div class="rest pointer" id="home2205" onclick="load_content_and_scroll_to_hash('gallery', 'gallery2205')">
                 Bildergalerie
             </div>
-            <div class="rest">
+            <div class="rest pointer">
                 Schiffe
             </div>
-            <div class="rest">
+            <div class="rest pointer">
                 Hauptquartier
             </div>
         </div>
@@ -63,7 +68,7 @@
     <div class="textcontainer_theme">
         <div class="textcontainer_title" style="background-image: url(img/Home/Logo_2070.png);"> </div>
         <div class="containerweitereInfos">
-            <div class="weitereInfos">WEITERE INFOS</div>
+            <div class="weitereInfos pointer">WEITERE INFOS</div>
         </div>
         <div class="container_maintext">
             <div class="maintext">
@@ -72,13 +77,13 @@
             </div> 
         </div>
         <div class="containerrest">
-            <div class="rest">
+            <div class="rest pointer">
                 Bildergalerie
             </div>
-            <div class="rest">
+            <div class="rest pointer">
                 Schiffe
             </div>
-            <div class="rest">
+            <div class="rest pointer">
                 Monumente
             </div>
         </div>
@@ -88,7 +93,7 @@
         <div class="textcontainer_theme">
             <div class="textcontainer_title" style="background-image: url(img/Home/Logo_1404.png);"> </div>
             <div class="containerweitereInfos">
-                <div class="weitereInfos">WEITERE INFOS</div>
+                <div class="weitereInfos pointer">WEITERE INFOS</div>
             </div>
             <div class="container_maintext">
                 <div class="maintext">
@@ -97,13 +102,13 @@
                 </div> 
             </div>
             <div class="containerrest">
-                <div class="rest">
+                <div class="rest pointer">
                     Bildergalerie
                 </div>
-                <div class="rest">
+                <div class="rest pointer">
                     Schiffe
                 </div>
-                <div class="rest">
+                <div class="rest pointer">
                     Monumente
                 </div>
             </div>
@@ -115,7 +120,7 @@
     <div class="textcontainer_theme">
         <div class="textcontainer_title" style="background-image: url(img/Home/Logo_1701.png);"> </div>
         <div class="containerweitereInfos">
-            <div class="weitereInfos">WEITERE INFOS</div>
+            <div class="weitereInfos pointer">WEITERE INFOS</div>
         </div>
         <div class="container_maintext">
             <div class="maintext">
@@ -124,13 +129,13 @@
             </div> 
         </div>
         <div class="containerrest">
-            <div class="rest">
+            <div class="rest pointer">
                 Bildergalerie
             </div>
-            <div class="rest">
+            <div class="rest pointer">
                 Schiffe
             </div>
-            <div class="rest">
+            <div class="rest pointer">
                 Schloss
             </div>
         </div>
@@ -140,7 +145,7 @@
     <div class="textcontainer_theme">
         <div class="textcontainer_title" style="background-image: url(img/Home/Logo_1503.png);"> </div>
         <div class="containerweitereInfos">
-            <div class="weitereInfos">WEITERE INFOS</div>
+            <div class="weitereInfos pointer">WEITERE INFOS</div>
         </div>
         <div class="container_maintext">
             <div class="maintext">
@@ -149,13 +154,10 @@
             </div> 
         </div>
         <div class="containerrest">
-            <div class="rest">
-                Bildergalerie
-            </div>
-            <div class="rest">
+            <div class="rest pointer">
                 Schiffe
             </div>
-            <div class="rest">
+            <div class="rest pointer">
                 Schloss
             </div>
         </div>
@@ -167,7 +169,7 @@
     <div class="textcontainer_theme">
         <div class="textcontainer_title" style="background-image: url(img/Home/Logo_1602.png);"> </div>
         <div class="containerweitereInfos">
-            <div class="weitereInfos">WEITERE INFOS</div>
+            <div class="weitereInfos pointer">WEITERE INFOS</div>
         </div>
         <div class="container_maintext">
             <div class="maintext">
@@ -176,13 +178,10 @@
             </div> 
         </div>
         <div class="containerrest">
-            <div class="rest">
-                Bildergalerie
-            </div>
-            <div class="rest">
+            <div class="rest pointer">
                 Schiffe
             </div>
-            <div class="rest">
+            <div class="rest pointer">
                 Schloss
             </div>
         </div>
@@ -193,7 +192,7 @@
     <div class="textcontainer_theme">
         <div class="textcontainer_title" style="background-image: url(img/Home/Logo_Union.png);"> </div>
         <div class="containerweitereInfos">
-            <div class="weitereInfos">WEITERE INFOS</div>
+            <div class="weitereInfos pointer">WEITERE INFOS</div>
         </div>
         <div class="container_maintext">
             <div class="maintext">
@@ -210,7 +209,7 @@
     <div class="textcontainer_theme">
         <div class="textcontainer_title" style="background-image: url(img/Home/Logo_online.png);"> </div>
         <div class="containerweitereInfos">
-            <div class="weitereInfos">WEITERE INFOS</div>
+            <div class="weitereInfos pointer">WEITERE INFOS</div>
         </div>
         <div class="container_maintext">
             <div class="maintext">
@@ -225,7 +224,7 @@
     <div class="textcontainer_theme">
         <div class="textcontainer_title" style="background-image: url(img/Home/Logo_DS.png);"> </div>
         <div class="containerweitereInfos">
-            <div class="weitereInfos">WEITERE INFOS</div>
+            <div class="weitereInfos pointer">WEITERE INFOS</div>
         </div>
         <div class="container_maintext">
             <div class="maintext">
@@ -241,7 +240,7 @@
     <div class="textcontainer_theme">
         <div class="textcontainer_title" style="background-image: url(img/Home/Logo_koenigreich.png);"> </div>
         <div class="containerweitereInfos">
-            <div class="weitereInfos">WEITERE INFOS</div>
+            <div class="weitereInfos pointer">WEITERE INFOS</div>
         </div>
         <div class="container_maintext">
             <div class="maintext">
@@ -256,7 +255,7 @@
     <div class="textcontainer_theme">
         <div class="textcontainer_title" style="background-image: url(img/Home/Logo_Welt.png);"> </div>
         <div class="containerweitereInfos">
-            <div class="weitereInfos">WEITERE INFOS</div>
+            <div class="weitereInfos pointer">WEITERE INFOS</div>
         </div>
         <div class="container_maintext">
             <div class="maintext">
