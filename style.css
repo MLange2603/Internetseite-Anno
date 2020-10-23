@@ -54,7 +54,15 @@ HTML{
     align-items: center;
     scrollbar-width: none;
     -ms-overflow-style: none;
+}
 
+.blockscrolling_Bildervorschau{
+    height: 93vh;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
 }
 
 .home_Bildervorschau::-webkit-scrollbar{
@@ -62,8 +70,7 @@ HTML{
 }
 
 .home_img_parallax{
-    height: 90%; /* !important um zu priorisieren und somit das Sichtfenter zu verkleinern */
-    width: 100% ;   
+    /* !important bei widht und height um zu priorisieren und somit das Sichtfenter zu verkleinern */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -275,7 +282,7 @@ HTML{
     width: 100%;
     height: 93vh;
     background-color: rgba(0, 0, 0, 0.91);
-    z-index: 2;
+    z-index: 3;
     display: block;
     visibility: hidden;
     display: flex;
@@ -652,13 +659,12 @@ a{
 .gallery_big{
     height: 90vh;
     width: 100%;
-    display: flex;
+    display: none;
     justify-content: space-around;
     align-items: center;
     background-color: rgba(169, 169, 169, 0.8);
     position: fixed;
     color: darkgray;
-    visibility: hidden;
 }
 
 .gallery_kreuz{
@@ -686,6 +692,15 @@ a{
     scrollbar-width: 0;
     scrollbar-width: none;
     -ms-overflow-style: none;
+}
+
+.blockscrolling_gallery_big_container{
+    height: 100%;
+    width: 85%;
+    position: absolute;
+    left: 7.5%;
+    top: 0;
+    z-index: 2;
 }
 
 .gallery_big_container::-webkit-scrollbar{
@@ -729,8 +744,7 @@ a{
 .impressum_container{
     background-color: black;
     width: 100%;
-    height: 25vh;
-    margin-top: 5%;
+    height: 15vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -741,7 +755,7 @@ a{
     min-width: 30%;
     height: 60%;
     color: white;
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 100;
     align-items: center;
     justify-content: center;
@@ -750,7 +764,7 @@ a{
 }
 
 .impressum_text{
-    margin-bottom: 5%;
+    margin-top: 3%;
 }
 
 .mailto{
@@ -770,6 +784,17 @@ a{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+}
+
+.headline_impressum{
+    width: inherit;
+    background-color: black;
+    padding-left: 5%;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 0.1%;
+    margin-top: -4%;
 }
 
 @media (max-width: 700px) {
@@ -901,6 +926,14 @@ a{
     }
 
     .jumptotop{
+        display: none;
+    }
+
+    .blockscrolling_gallery_big_container{
+        display: none;
+    }
+
+    .wI_navigation_container{
         display: none;
     }
 }

@@ -1,34 +1,7 @@
 function closediv() {
-    var gallery = document.getElementById("gallery_big_1800");
-    if(gallery) {
-        if(gallery.style.visibility == "visible") {
-            gallery.style.visibility = "hidden";
-            }
-        }
-    var gallery1 = document.getElementById("gallery_big_2205");
-    if(gallery1) {
-        if(gallery1.style.visibility == "visible") {
-            gallery1.style.visibility = "hidden";
-            }
-        }
-    var gallery2 = document.getElementById("gallery_big_2070");
-    if(gallery2) {
-        if(gallery2.style.visibility == "visible") {
-            gallery2.style.visibility = "hidden";
-            }
-        }
-    var gallery3 = document.getElementById("gallery_big_1404");
-    if(gallery3) {
-        if(gallery3.style.visibility == "visible") {
-            gallery3.style.visibility = "hidden";
-            }
-        }
-    var gallery4 = document.getElementById("gallery_big_1701");
-    if(gallery4) {
-        if(gallery4.style.visibility == "visible") {
-            gallery4.style.visibility = "hidden";
-            }
-        }
+
+    $(".gallery_big").hide();
+    
     var menu = document.getElementById("menu");
     if(menu) {
         if(menu.style.visibility == "visible") {
@@ -38,24 +11,33 @@ function closediv() {
 };
 
 function showgallery_and_scroll_to_element(number, hash) {
-    var gallery = document.getElementById("gallery_big_"+ number);
-    if(gallery) {
-        if(gallery.style.visibility == "hidden") {
-            gallery.style.visibility = "visible";
-            } else {
-                gallery.style.visibility = "hidden";
-            }
-        }
+    $('#gallery_big_'+number).css("display","flex");
     location.hash = "#" + hash;
 };
 
 function load_content(contenturl) {
+    load_content(contenturl, '');
+}
+
+function menu() {
+    var menu = document.getElementById("menu");
+    if(menu.style.visibility == "visible") {
+        menu.style.visibility = "hidden";
+            } else {
+                menu.style.visibility = "visible";
+            }
+}
+
+function load_content(contenturl, id) {
     const xhr = new XMLHttpRequest();
         const container = document.getElementsByClassName('maincontainer');
     
         xhr.onload = function() {
             if (this.status === 200) {
                 maincontainer.innerHTML = xhr.responseText;
+                if (id !== '') {
+                    location.hash = "#" + id;
+                }
             } else {
                 console.warn('Seite konnte nicht geladen werden');
             }
@@ -64,12 +46,7 @@ function load_content(contenturl) {
         xhr.open('get', contenturl + ".html");
         xhr.send();
 
-    var menu = document.getElementById("menu");
-    if(menu) {
-        if(menu.style.visibility == "visible") {
-        menu.style.visibility = "hidden";
-            } 
-    };
+        closediv
 
     if(contenturl) {
         if(contenturl == 'weitereinfos') {
@@ -92,29 +69,6 @@ function load_content(contenturl) {
             document.title = 'ANNO - Die Spieleserie mit der Quersumme 9';
             favicon.setAttribute("href", "img/index/icons/home.ico");
         };
-    };
-
-    if(contenturl) {
-        if(contenturl == 'weitereinfos') {
-            document.title = 'Weitere Infos über die Spieleserie';
-            favicon.setAttribute("href", "img/index/icons/weitereinfos.ico");
-        }
-        if(contenturl == 'boats') {
-            document.title = 'Schiffe in ANNO';
-            favicon.setAttribute("href", "img/index/icons/boats.ico");
-        }
-        if(contenturl == 'buildings') {
-            document.title = 'Besondere Gebäude in ANNO';
-            favicon.setAttribute("href", "img/index/icons/buildings.ico");
-        }
-        if(contenturl == 'gallery') {
-            document.title = 'Screenshots aus den Spielen';
-            favicon.setAttribute("href", "img/index/icons/gallery.ico");
-        }
-        if(contenturl == 'home') {
-            document.title = 'ANNO - Die Spieleserie mit der Quersumme 9';
-            favicon.setAttribute("href", "img/index/icons/home.ico");
-        }
     };
 };
 
@@ -135,11 +89,34 @@ function loadingscreen() {
     HTML.style.overflow = "auto"
 };
 
-$("scroll.pointer.scrollLeft").click(function() {
-    $(".gallery_big_container").scrollLeft(1000);
-});
+function scrollHeader() {      
+    var imgWidth = $(".home_img_parallax.Bildervorschau_Bild").outerWidth();
+    var scrollContainer = (".home_Bildervorschau");
+    var scrollstatus = $(scrollContainer).scrollLeft();
+    $(scrollContainer).animate({ scrollLeft: $(scrollContainer).scrollLeft() + imgWidth }, 2000);
+    var imgWidthtimessix = 5 * imgWidth;
+    var backtotheroots = -1000000
+    if (imgWidthtimessix < scrollstatus) {
+        $(scrollContainer).animate({ scrollLeft: $(scrollContainer).scrollLeft() + backtotheroots })
+    }
+};
 
-    //$(".scrollLeft").on("click", function(e) {
-    //    $(document).scrollLeft($(this).parent().next().offset().top);
-    //    $(this).parent().next() // this is the next div container.
-    //});
+function scrollLogo() {      
+    var imgHeight = $(".Bildervorschau_Logo").outerHeight();
+    var scrollContainer = (".Bildervorschau_Logo_container");
+    var scrollstatus = $(scrollContainer).scrollTop();
+    $(scrollContainer).animate({ scrollTop: $(scrollContainer).scrollTop() + imgHeight }, 2000);
+    var imgHeighttimessix = 5 * imgHeight;
+    var backtotheroots = -1000000
+    if (imgHeighttimessix < scrollstatus) {
+        $(scrollContainer).animate({ scrollTop: $(scrollContainer).scrollTop() + backtotheroots })
+    }
+};
+
+function scrollMe( $source, direction ) {
+    var $galleryContainer = $source.parent(".gallery_big");
+    var imgWidth = $galleryContainer.find(".img_big").first().outerWidth();
+    var scrollAmount = $source.hasClass('scrollLeft') ? -imgWidth : imgWidth;
+    var $scrollContatiner = $galleryContainer.find(".gallery_big_container");
+    $scrollContatiner.animate({ scrollLeft: $scrollContatiner.scrollLeft() + scrollAmount });
+};
