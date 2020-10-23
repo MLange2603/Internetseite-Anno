@@ -11,7 +11,32 @@ HTML{
     border: 0;
     box-sizing: inherit;
 }
+/*
+#HTML{
+    overflow: hidden;
+}
 
+#loadingscreencontainer{
+    width: 100vw;
+    height: 100vh;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+#loading{
+    width: 15vw;
+    height: 15vw;
+    background-image: url(img/index/Icons/loading.gif);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+*/
 .maincontainer{
     height: auto;
     margin-bottom: 5%;
@@ -24,7 +49,7 @@ HTML{
 
 .home_Bildervorschau{
     height: 93vh;
-    width: 95%;
+    width: 100%;
     display: flex;
     overflow: auto;
     margin-left: auto;
@@ -40,14 +65,54 @@ HTML{
     display: none;
 }
 
+.home_img_parallax{
+    height: 60% ; /* !important um zu priorisieren und somit das Sichtfenter zu verkleinern */
+    width: 100% ;   
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    font-weight: bold;
+    color: white;
+}
+
 .Bildervorschau_Bild{
     min-width: 100%;
-    height: 92%;
-    background-size: contain;
+    height: 100%;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
+.Bildervorschau_Logo_container{
+    height: 20%;
+    width: 50%;
+    position: absolute;
+    margin-bottom: 10%;
+    margin-left: 25%;
+    margin-right: 25%;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+} 
+
+.Bildervorschau_Logo_container::-webkit-scrollbar{
+    display: none;
+}
+
+.Bildervorschau_Logo{
+    width: 100%;
+    min-height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 
 .containertheme2{
     display: flex;
@@ -260,7 +325,6 @@ HTML{
     width: 10%;
     display: flex;
     flex-direction: column;
-    background-color: rgba(100, 149, 237, 0.45);
     height: 93vh;
     justify-content: space-around;
     align-items: center;
@@ -272,10 +336,24 @@ HTML{
     width: 10%;
     display: flex;
     flex-direction: column;
-    background-color: rgba(100, 149, 237, 0.45);
     height: 93vh;
     justify-content: space-around;
     align-items: center;
+}
+
+.wI_navigation_container{
+    background-color: rgba(100, 149, 237, 0.45);
+    height: 93vh;
+    width: 20%;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.wI_navigation_container:hover{
+    border-radius: 30px;
+    transition: 1s;
+    background-color: rgba(100, 149, 237, 0.3);
 }
 
 .wI_navigation_rest{
@@ -284,12 +362,22 @@ HTML{
     position: fixed;
     top: 0;
     right: 0;
-    background-color: rgb(56, 87, 145);
+    background-color: rgba(100, 149, 237, 0.45);
     z-index: -1;
     color: white;
     font-family: Georgia, 'Times New Roman', Times, serif;  
     font-size: 1.5rem;
     text-align: center;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: rgba(56, 87, 145, 0.6);
+}
+
+.wI_navigation_rest:hover{
+    border-radius: 30px;
+    transition: 1s;
+    background-color: rgba(56, 87, 145, 0.3);
 }
 
 .wI_navigation_Einheit{
@@ -624,6 +712,15 @@ a{
     background-position: center;
     background-repeat: no-repeat;
 }
+
+
+.img_big_parallax{ 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 
 .scroll{
     height: 20%;

@@ -1,32 +1,3 @@
-
-setTimeout(function Home() {
-
-    const xhr = new XMLHttpRequest();
-        const container = document.getElementsByClassName('maincontainer');
-    
-        xhr.onload = function() {
-            if (this.status === 200) {
-                maincontainer.innerHTML = xhr.responseText;
-            } else {
-                console.warn('Seite konnte nicht geladen werden');
-            }
-        };
-    
-        xhr.open('get', 'home.html');
-        xhr.send();
-}, 0);
-
-function menu() {
-    var menu = document.getElementById("menu");
-    if(menu) {
-        if(menu.style.visibility == "hidden") {
-        menu.style.visibility = "visible";
-            } else {
-                menu.style.visibility = "hidden";
-            }
-    }       
-};
-
 function closediv() {
     var gallery = document.getElementById("gallery_big_1800");
     if(gallery) {
@@ -92,44 +63,83 @@ function load_content(contenturl) {
     
         xhr.open('get', contenturl + ".html");
         xhr.send();
+
     var menu = document.getElementById("menu");
     if(menu) {
         if(menu.style.visibility == "visible") {
         menu.style.visibility = "hidden";
             } 
-    }
+    };
+
+    if(contenturl) {
+        if(contenturl == 'weitereinfos') {
+            document.title = 'Weitere Infos über die Spieleserie';
+            favicon.setAttribute("href", "img/index/icons/weitereinfos.ico");
+        }
+        if(contenturl == 'boats') {
+            document.title = 'Schiffe in ANNO';
+            favicon.setAttribute("href", "img/index/icons/boats.ico");
+        }
+        if(contenturl == 'buildings') {
+            document.title = 'Besondere Gebäude in ANNO';
+            favicon.setAttribute("href", "img/index/icons/buildings.ico");
+        }
+        if(contenturl == 'gallery') {
+            document.title = 'Screenshots aus den Spielen';
+            favicon.setAttribute("href", "img/index/icons/gallery.ico");
+        }
+        if(contenturl == 'home') {
+            document.title = 'ANNO - Die Spieleserie mit der Quersumme 9';
+            favicon.setAttribute("href", "img/index/icons/home.ico");
+        };
+    };
+
+    if(contenturl) {
+        if(contenturl == 'weitereinfos') {
+            document.title = 'Weitere Infos über die Spieleserie';
+            favicon.setAttribute("href", "img/index/icons/weitereinfos.ico");
+        }
+        if(contenturl == 'boats') {
+            document.title = 'Schiffe in ANNO';
+            favicon.setAttribute("href", "img/index/icons/boats.ico");
+        }
+        if(contenturl == 'buildings') {
+            document.title = 'Besondere Gebäude in ANNO';
+            favicon.setAttribute("href", "img/index/icons/buildings.ico");
+        }
+        if(contenturl == 'gallery') {
+            document.title = 'Screenshots aus den Spielen';
+            favicon.setAttribute("href", "img/index/icons/gallery.ico");
+        }
+        if(contenturl == 'home') {
+            document.title = 'ANNO - Die Spieleserie mit der Quersumme 9';
+            favicon.setAttribute("href", "img/index/icons/home.ico");
+        }
+    };
 };
 
 function load_content_and_scroll_to_hash(contenturl, hash) {
-    const xhr = new XMLHttpRequest();
-        const container = document.getElementsByClassName('maincontainer');
-    
-        xhr.onload = function() {
-            if (this.status === 200) {
-                maincontainer.innerHTML = xhr.responseText;
-            } else {
-                console.warn('Seite konnte nicht geladen werden');
-            }
-        };
-    
-        xhr.open('get', contenturl + ".html");
-        xhr.send();
-    var menu = document.getElementById("menu");
-    if(menu) {
-        if(menu.style.visibility == "visible") {
-        menu.style.visibility = "hidden";
-            } 
-    }
-    location.hash = '#' + hash 
+    load_content (contenturl);
+    scrolling(hash);
 };
 
-$(".scrollLeft").on("click", function(e) {
-    $(document).scrollLeft($(this).parent().next().offset().top);
-    // $(this).parent().next() // this is the next div container.
-    return false; // prevent anchor
+function scrolling(hash) {
+    location.hash = "#" + hash
+};
+
+function loadingscreen() {
+    var loading = document.getElementById("loadingscreencontainer");
+    loading.style.display = "none"
+
+    var HTML = document.getElementById("HTML");
+    HTML.style.overflow = "auto"
+};
+
+$("scroll.pointer.scrollLeft").click(function() {
+    $(".gallery_big_container").scrollLeft(1000);
 });
 
-
-function scrolling(hash) {
-    location.hash = hash
-}
+    //$(".scrollLeft").on("click", function(e) {
+    //    $(document).scrollLeft($(this).parent().next().offset().top);
+    //    $(this).parent().next() // this is the next div container.
+    //});
