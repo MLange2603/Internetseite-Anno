@@ -8,12 +8,26 @@ function closediv() {
         menu.style.visibility = "hidden";
             } 
     }   
+
+    var navigationrest = document.getElementById("navigationrest");    
+    var navigation = document.getElementById('navigation');
+    navigationrest.style.display = "flex";
+    navigation.style.display = "flex";
 };
 
 function showgallery_and_scroll_to_element(number, hash) {
     $('#gallery_big_'+number).css("display","flex");
     location.hash = "#" + hash;
 };
+
+function showgallery_and_disable_navigation(number) {
+    var navigationrest = document.getElementById("navigationrest");    
+    var navigation = document.getElementById('navigation');
+    navigationrest.style.display = "none";
+    navigation.style.display = "none";
+    
+    $('#gallery_big_'+number).css("display","flex");
+}
 
 function load_content(contenturl) {
     load_content(contenturl, '');
@@ -72,11 +86,6 @@ function load_content(contenturl, id) {
     };
 };
 
-function load_content_and_scroll_to_hash(contenturl, hash) {
-    load_content (contenturl);
-    scrolling(hash);
-};
-
 function scrolling(hash) {
     location.hash = "#" + hash
 };
@@ -95,11 +104,12 @@ function scrollHeader() {
     var scrollstatus = $(scrollContainer).scrollLeft();
     $(scrollContainer).animate({ scrollLeft: $(scrollContainer).scrollLeft() + imgWidth }, 2000);
     var imgWidthtimessix = 5 * imgWidth;
-    var backtotheroots = -1000000
+    var backtotheroots = -6 * imgWidth
     if (imgWidthtimessix < scrollstatus) {
-        $(scrollContainer).animate({ scrollLeft: $(scrollContainer).scrollLeft() + backtotheroots })
+        $(scrollContainer).animate({ scrollLeft: $(scrollContainer).scrollLeft() + backtotheroots }, 2500) 
     }
 };
+
 
 function scrollLogo() {      
     var imgHeight = $(".Bildervorschau_Logo").outerHeight();
@@ -107,16 +117,20 @@ function scrollLogo() {
     var scrollstatus = $(scrollContainer).scrollTop();
     $(scrollContainer).animate({ scrollTop: $(scrollContainer).scrollTop() + imgHeight }, 2000);
     var imgHeighttimessix = 5 * imgHeight;
-    var backtotheroots = -1000000
+    var backtotheroots = -6 * imgHeight
     if (imgHeighttimessix < scrollstatus) {
-        $(scrollContainer).animate({ scrollTop: $(scrollContainer).scrollTop() + backtotheroots })
+        $(scrollContainer).animate({ scrollTop: $(scrollContainer).scrollTop() + backtotheroots }, 2500)
     }
 };
 
-function scrollMe( $source, direction ) {
+function scrollgalleryBig( $source, direction ) {
     var $galleryContainer = $source.parent(".gallery_big");
     var imgWidth = $galleryContainer.find(".img_big").first().outerWidth();
     var scrollAmount = $source.hasClass('scrollLeft') ? -imgWidth : imgWidth;
     var $scrollContatiner = $galleryContainer.find(".gallery_big_container");
     $scrollContatiner.animate({ scrollLeft: $scrollContatiner.scrollLeft() + scrollAmount });
 };
+
+function scolltohash(hash) {
+    location.hash = "#" + hash
+}

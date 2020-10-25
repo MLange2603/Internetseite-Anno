@@ -15,34 +15,34 @@
         <div id="loading"> </div>
     </div> -->
     <div id="menu" onclick="menu()">
-        <div class="menu_theme pointer" onclick="load_content('weitereinfos')">
+        <div class="menu_theme pointer" onclick="load_content('weitereinfos', 'header')">
             WEITERE INFOS
         </div>
-        <div class="menu_theme pointer"  onclick="load_content('boats')">
+        <div class="menu_theme pointer"  onclick="load_content('boats', 'header')">
             SCHIFFE
         </div>
-        <div class="menu_theme pointer" onclick="load_content('buildings')">
+        <div class="menu_theme pointer" onclick="load_content('buildings', 'header')">
             GEBÄUDE
         </div>
-        <div class="menu_theme pointer" onclick="load_content('gallery')">
+        <div class="menu_theme pointer" onclick="load_content('gallery', 'header')">
             GALERIE
         </div>
     </div>
-    <div class="header_container">
-        <div class="header_index pointer" onclick="load_content('home')">
+    <div class="header_container" id="header">
+        <div class="header_index pointer" onclick="load_content('home', 'header')">
             ANNO
         </div>
         <div class="header_main">
-            <div class="header_main_link pointer" onclick="load_content('weitereinfos')">
+            <div class="header_main_link pointer" onclick="load_content('weitereinfos', 'header')">
                 WEITERE INFOS
             </div>
-            <div class="header_main_link pointer" onclick="load_content('boats')">
+            <div class="header_main_link pointer" onclick="load_content('boats', 'header')">
                 SCHIFFE
             </div>
-            <div class="header_main_link pointer" onclick="load_content('buildings')">
+            <div class="header_main_link pointer" onclick="load_content('buildings', 'header')">
                 GEBÄUDE
             </div>
-            <div class="header_main_link pointer" onclick="load_content('gallery')">
+            <div class="header_main_link pointer" onclick="load_content('gallery', 'header')">
                 GALERIE
             </div>
         </div>
@@ -82,7 +82,6 @@
         scrollHeader();
         scrollLogo();
             }, 10000);
-        });
-
+    });
 
 </script>
