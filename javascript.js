@@ -1,4 +1,4 @@
-function closediv() {
+function closediv(navigation) {
 
     $(".gallery_big").hide();
     
@@ -9,10 +9,18 @@ function closediv() {
             } 
     }   
 
-    var navigationrest = document.getElementById("navigationrest");    
-    var navigation = document.getElementById('navigation');
-    navigationrest.style.display = "flex";
-    navigation.style.display = "flex";
+        var navigationrest = document.getElementById("navigationrest");    
+        var navigation = document.getElementById('navigation');
+        navigationrest.style.display = "flex";
+        navigation.style.display = "flex";
+    
+        if(navigation = undefined) {
+            console.warn('MOIN LEUDE')
+        }
+        if(navigationrest = undefined) {
+            console.warn('MOIN LEUDE')
+        }
+    
 };
 
 function showgallery_and_scroll_to_element(number, hash) {

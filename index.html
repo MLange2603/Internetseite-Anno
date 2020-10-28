@@ -9,11 +9,7 @@
     <script src="jquery-3.5.1.min.js"> </script>
     <script type="text/javascript" src="slick.js"></script>
 </head>
-<body onload="load_content('home')" onscroll="closediv()" id="#index">
-    <!--
-    <div id="loadingscreencontainer">
-        <div id="loading"> </div>
-    </div> -->
+<body onload="load_content('home')" onscroll="closediv(1)" id="#index">
     <div id="menu" onclick="menu()">
         <div class="menu_theme pointer" onclick="load_content('weitereinfos', 'header')">
             WEITERE INFOS
@@ -58,30 +54,12 @@
 </html>
 
 <script>
-    // "karussel"
-    // "jquery karussel" ... suchen ^_^
-
-    // BILD5 (Bild1)
-
-    // var vieleBilder = [10,20,30,40,50];
-    // console.log(vieleBilder[1]);
-
-    // Array
-
-
-    // BILD1 BILD2 BILD3 BILD4 BILD5
-
-    // var headerScrollPostion = 0;
-    // alle 3 sek: headerScrollPostion += width;
-    // scroll to  headerScrollPostion;
-    // wenn headerScrollPostion > ... dann headerScrollPostion = 0;
-
     $( document ).ready(function() {
     console.log( "ready!" );
     setInterval(function(){
         scrollHeader();
         scrollLogo();
-            }, 10000);
+            }, 9000);
     });
 
 </script>

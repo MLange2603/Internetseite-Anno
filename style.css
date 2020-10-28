@@ -11,32 +11,7 @@ HTML{
     border: 0;
     box-sizing: inherit;
 }
-/*
-#HTML{
-    overflow: hidden;
-}
 
-#loadingscreencontainer{
-    width: 100vw;
-    height: 100vh;
-    background-color: aliceblue;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 0;
-    left: 0;
-    position: absolute;
-}
-
-#loading{
-    width: 15vw;
-    height: 15vw;
-    background-image: url(img/index/Icons/loading.gif);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-*/
 .maincontainer{
     height: auto;
     margin-bottom: 5%;
@@ -811,28 +786,6 @@ a{
     margin-top: -4%;
     
 }
-/* 
-table{
-    color: black;
-    border-radius: 30px;
-    background-color: rgba(161, 184, 192, 0.5);
-    margin-top: 5%;
-    width: 90%;
-    font-size: 1.5rem;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 2%;
-}
-
-td{
-    padding-top: 1.5%;
-    padding-bottom: 1.5%;
-}
-
-.tdzahl{
-    text-align: right;
-} */
-
 
 @media (max-width: 700px) {
     HTML{
