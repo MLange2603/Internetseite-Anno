@@ -1,26 +1,35 @@
-function closediv(navigation) {
+function closediv() {
 
-    $(".gallery_big").hide();
-    
+    closegallerybig();
+
     var menu = document.getElementById("menu");
     if(menu) {
         if(menu.style.visibility == "visible") {
         menu.style.visibility = "hidden";
             } 
-    }   
+    }     
+};
 
+function closegallerybig() {
+    $(".gallery_big").hide();
+
+        var Q = window.matchMedia("(min-width: 700px)")
         var navigationrest = document.getElementById("navigationrest");    
         var navigation = document.getElementById('navigation');
-        navigationrest.style.display = "flex";
-        navigation.style.display = "flex";
-    
-        if(navigation = undefined) {
-            console.warn('MOIN LEUDE')
+        
+        if (Q.matches) {
+            if (navigation != null) {
+            navigationrest.style.display = "flex"
+            } else {
+            
+                }
+            if (navigationrest != null) {
+            navigation.style.display = "flex";
+            } else {
+
+                }
         }
-        if(navigationrest = undefined) {
-            console.warn('MOIN LEUDE')
-        }
-    
+
 };
 
 function showgallery_and_scroll_to_element(number, hash) {

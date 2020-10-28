@@ -789,9 +789,15 @@ a{
 
 @media (max-width: 700px) {
     HTML{
-        font-size: 20px;
+        font-size: 15px;
     }
     
+    .maincontainer_wI{
+        max-width: 100vw;
+        overflow: auto;
+        justify-content: center;
+    }
+
     .header_container{
         display: flex;
         justify-content: space-between;
@@ -831,10 +837,6 @@ a{
         display: none;
     }   
     
-    .maincontainer_wI{
-        justify-content: center;
-    }
-    
     .wI_basecontainer{
         width: 100%;
     }
@@ -860,6 +862,7 @@ a{
         overflow: auto;
         padding-left: 1%;
         padding-right: 1%;
+        font-size: 1.2rem;
     }
 
     .containertheme1{
