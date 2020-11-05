@@ -733,7 +733,7 @@ a{
 .impressum_container{
     background-color: black;
     width: 100%;
-    height: 15vh;
+    min-height: 15vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
